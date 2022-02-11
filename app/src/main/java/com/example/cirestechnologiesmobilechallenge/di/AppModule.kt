@@ -1,7 +1,5 @@
 package com.example.cirestechnologiesmobilechallenge.di
 
-import com.example.cirestechnologiesmobilechallenge.remote.MyItemServiceImpl
-import com.example.cirestechnologiesmobilechallenge.remote.MyItemServices
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -26,12 +24,6 @@ object AppModule {
                 serializer = KotlinxSerializer()
             }
         }
-    }
-
-    @Provides
-    @Singleton
-    fun provideMyItemService(client: HttpClient): MyItemServices {
-        return MyItemServiceImpl(client)
     }
 
 }

@@ -13,10 +13,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.CiresTechnologiesMobileChallenge">
         <activity
-            android:name=".presentation.authentification.LogInActivity"
+            android:name=".presentation.authentication.LogInActivity"
             android:exported="false" />
         <activity
-            android:name=".presentation.splashscreen.SplashScreenActivity"
+            android:name=".presentation.onBoarding.OnBoardingActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -24,9 +24,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".presentation.onboarding.OnboardingActivity"
-            android:exported="false" />
     </application>
 
 </manifest>

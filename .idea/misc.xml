@@ -1,5 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/pc/AndroidStudioProjects/CiresTechnologiesMobileChallenge/app/src/main/res/drawable/bg_black_circle.xml" value="0.213" />
+        <entry key="..\:/Users/pc/AndroidStudioProjects/CiresTechnologiesMobileChallenge/app/src/main/res/drawable/bg_gray_circle.xml" value="0.213" />
+        <entry key="..\:/Users/pc/AndroidStudioProjects/CiresTechnologiesMobileChallenge/app/src/main/res/layout/activity_log_in.xml" value="0.3546875" />
+        <entry key="..\:/Users/pc/AndroidStudioProjects/CiresTechnologiesMobileChallenge/app/src/main/res/layout/activity_on_boarding.xml" value="0.19791666666666666" />
+        <entry key="..\:/Users/pc/AndroidStudioProjects/CiresTechnologiesMobileChallenge/app/src/main/res/layout/activity_onboarding.xml" value="0.3546875" />
+        <entry key="..\:/Users/pc/AndroidStudioProjects/CiresTechnologiesMobileChallenge/app/src/main/res/layout/activity_splash_screen.xml" value="0.3546875" />
+        <entry key="..\:/Users/pc/AndroidStudioProjects/CiresTechnologiesMobileChallenge/app/src/main/res/layout/fragment_on_boarding.xml" value="0.17604166666666668" />
+      </map>
+    </option>
+  </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="JDK" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>
