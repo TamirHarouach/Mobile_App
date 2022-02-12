@@ -1,8 +1,11 @@
 package com.example.cirestechnologiesmobilechallenge.di
 
+import android.content.Context
+import com.example.cirestechnologiesmobilechallenge.core.util.SharedPreference
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
+import dagger.hilt.android.qualifiers.ApplicationContext
 import dagger.hilt.components.SingletonComponent
 import io.ktor.client.*
 import io.ktor.client.engine.android.*
@@ -24,6 +27,12 @@ object AppModule {
                 serializer = KotlinxSerializer()
             }
         }
+    }
+
+    @Singleton
+    @Provides
+    fun provideSharedPreference(@ApplicationContext context: Context): SharedPreference {
+        return SharedPreference(context)
     }
 
 }

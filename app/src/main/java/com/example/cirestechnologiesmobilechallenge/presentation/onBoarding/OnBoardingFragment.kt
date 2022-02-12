@@ -42,9 +42,9 @@ class OnBoardingFragment : Fragment() {
 
     private fun getOnBoardAssetsLocation(): List<Int> {
         val onBoardAssets: MutableList<Int> = ArrayList()
-        onBoardAssets.add(R.drawable.ic_launcher_background)
-        onBoardAssets.add(R.drawable.ic_launcher_background)
-        onBoardAssets.add(R.drawable.ic_launcher_background)
+        onBoardAssets.add(R.drawable.illustrator_view1)
+        onBoardAssets.add(R.drawable.illustrator_view2)
+        onBoardAssets.add(R.drawable.illustrator_view3)
         return onBoardAssets
     }
 }
