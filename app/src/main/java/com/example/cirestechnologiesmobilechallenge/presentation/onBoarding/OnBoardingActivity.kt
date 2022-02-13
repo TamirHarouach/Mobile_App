@@ -1,5 +1,6 @@
 package com.example.cirestechnologiesmobilechallenge.presentation.onBoarding
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -11,6 +12,7 @@ import androidx.viewpager2.widget.ViewPager2
 import com.example.cirestechnologiesmobilechallenge.R
 import com.example.cirestechnologiesmobilechallenge.core.util.collectLatestLifecycleFlow
 import com.example.cirestechnologiesmobilechallenge.databinding.ActivityOnBoardingBinding
+import com.example.cirestechnologiesmobilechallenge.presentation.authentication.LogInActivity
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
@@ -24,11 +26,14 @@ class OnBoardingActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityOnBoardingBinding.inflate(layoutInflater)
 
+        // Using The SplashScreen API
         initSplashScreen()
 
         setContentView(binding.root)
+
         val numberOfScreens = resources.getStringArray(R.array.on_boarding_titles).size
         initViewPager(numberOfScreens)
+
         setOnButtonsClickListener()
         viewModelCollector(numberOfScreens)
     }
@@ -53,7 +58,7 @@ class OnBoardingActivity : AppCompatActivity() {
     }
 
     private fun goToLoginPage() {
-        Log.e("GO TO LOGIN", "Go To logIn")
+        startActivity(Intent(this, LogInActivity::class.java))
     }
 
     private fun initSplashScreen() {

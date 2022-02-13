@@ -1,5 +1,8 @@
 <resources>
     <string name="app_name">Cires Technologies Mobile Challenge</string>
+
+<!--    On Boarding Activity    -->
+
     <string-array name="on_boarding_titles">
         <item>On Boarding Title 1</item>
         <item>On Boarding Title 2</item>
@@ -10,7 +13,18 @@
         <item>2. Lorem Ipsum is simply dummy \ntext of the printing and typesetting \nindustry. Lorem Ipsum has been …</item>
         <item>3. Lorem Ipsum is simply dummy \ntext of the printing and typesetting \nindustry. Lorem Ipsum has been …</item>
     </string-array>
+
     <string name="on_boarding_bottom_text">Not ready to sign up? Explore the app</string>
     <string name="skip">Skip</string>
     <string name="next">Next</string>
+
+    <!--    Log In Activity    -->
+
+    <string name="sign_in">Sign In</string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="log_in">LogIn</string>
+
+    <string name="blocked_account">Ce compte est bloqué</string>
+    <string name="wrong_account">Nom d\'Utilisateur ou Mot de Passe erroné</string>
 </resources>
