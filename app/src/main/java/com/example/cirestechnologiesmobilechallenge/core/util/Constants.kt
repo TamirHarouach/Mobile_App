@@ -11,4 +11,14 @@ object Constants {
     const val SUCCESS : String = "success"
     const val ERROR : String = "error"
     const val BLOCKED : String = "blocked"
+
+    enum class Categories(val value : String) {
+        SCIENCE ("science"),
+        BUSINESS("business"),
+        SPORTS("sports"),
+        TECHNOLOGY("technology"),
+        STARTUP("startup"),
+        AUTOMOBILE("automobile")
+
+    }
 }

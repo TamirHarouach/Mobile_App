@@ -1,7 +1,9 @@
 package com.example.cirestechnologiesmobilechallenge.di
 
 import android.content.Context
+import com.example.cirestechnologiesmobilechallenge.data.remote.service.NewsServiceImpl
 import com.example.cirestechnologiesmobilechallenge.core.util.SharedPreference
+import com.example.cirestechnologiesmobilechallenge.data.remote.repository.NewsServices
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -22,9 +24,16 @@ object AppModule {
     @Singleton
     fun provideHttpClient(): HttpClient {
         return HttpClient(Android) {
-            install(Logging)
+            install(Logging) {
+                level = LogLevel.BODY
+                logger = Logger.DEFAULT
+            }
             install(JsonFeature) {
-                serializer = KotlinxSerializer()
+                serializer = KotlinxSerializer(kotlinx.serialization.json.Json {
+                    coerceInputValues = true
+                    ignoreUnknownKeys = true
+                })
+
             }
         }
     }
@@ -33,6 +42,12 @@ object AppModule {
     @Provides
     fun provideSharedPreference(@ApplicationContext context: Context): SharedPreference {
         return SharedPreference(context)
+    }
+
+    @Provides
+    @Singleton
+    fun provideNews(client: HttpClient): NewsServices {
+        return NewsServiceImpl(client)
     }
 
 }

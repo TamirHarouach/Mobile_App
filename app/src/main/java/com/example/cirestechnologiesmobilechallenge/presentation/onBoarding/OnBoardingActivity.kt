@@ -26,9 +26,6 @@ class OnBoardingActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityOnBoardingBinding.inflate(layoutInflater)
 
-        // Using The SplashScreen API
-        initSplashScreen()
-
         setContentView(binding.root)
 
         val numberOfScreens = resources.getStringArray(R.array.on_boarding_titles).size
@@ -61,14 +58,7 @@ class OnBoardingActivity : AppCompatActivity() {
         startActivity(Intent(this, LogInActivity::class.java))
     }
 
-    private fun initSplashScreen() {
-        installSplashScreen().apply {
-            setKeepOnScreenCondition {
-                if (!viewModel.goToOnBoarding.value) goToLoginPage()
-                viewModel.isLoading.value
-            }
-        }
-    }
+
 
     private fun setOnButtonsClickListener() {
         binding.onBoardNext.setOnClickListener {

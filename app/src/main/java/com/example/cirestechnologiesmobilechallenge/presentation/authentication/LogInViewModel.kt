@@ -5,12 +5,13 @@ import androidx.lifecycle.viewModelScope
 import com.example.cirestechnologiesmobilechallenge.core.util.Constants
 import com.example.cirestechnologiesmobilechallenge.domain.model.User
 import com.example.cirestechnologiesmobilechallenge.presentation.onBoarding.OnBoardingViewModel
+import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.MutableSharedFlow
 import kotlinx.coroutines.flow.asSharedFlow
 import kotlinx.coroutines.launch
 import javax.inject.Inject
 
-class LogInViewModel@Inject constructor(): ViewModel() {
+class LogInViewModel: ViewModel() {
 
 
     private val _eventFlow = MutableSharedFlow<UIEvent>()

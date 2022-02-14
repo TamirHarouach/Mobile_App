@@ -8,27 +8,27 @@ import kotlinx.serialization.Serializable
 @Serializable
 data class DataDto(
     @SerialName("author")
-    val author: String,
+    val author: String?,
     @SerialName("content")
-    val content: String,
+    val content: String?,
     @SerialName("date")
-    val date: String,
+    val date: String?,
     @SerialName("imageUrl")
-    val imageUrl: String,
+    val imageUrl: String?,
     @SerialName("readMoreUrl")
-    val readMoreUrl: String,
+    val readMoreUrl: String?,
     @SerialName("time")
-    val time: String,
+    val time: String?,
     @SerialName("title")
-    val title: String,
+    val title: String?,
     @SerialName("url")
-    val url: String
+    val url: String?
 ) {
     fun toData() : Data {
         return Data(
-            title = title,
-            imageUrl = imageUrl,
-            dateTime = date
+            title = title!!,
+            imageUrl = imageUrl!!,
+            dateTime = date!!
         )
     }
 }

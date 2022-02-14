@@ -32,7 +32,7 @@ class OnBoardingViewModel@Inject constructor(
 
     init {
         viewModelScope.launch {
-            delay(3000)
+//            delay(3000)
             _goToOnBoarding.value = sharedPreference.getValueBoolean(Constants.SHOW_ON_BOARDING, true)
             _isLoading.value = false
         }

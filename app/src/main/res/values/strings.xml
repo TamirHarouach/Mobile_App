@@ -1,8 +1,7 @@
 <resources>
     <string name="app_name">Cires Technologies Mobile Challenge</string>
 
-<!--    On Boarding Activity    -->
-
+    <!--    On Boarding Activity    -->
     <string-array name="on_boarding_titles">
         <item>On Boarding Title 1</item>
         <item>On Boarding Title 2</item>
@@ -19,7 +18,6 @@
     <string name="next">Next</string>
 
     <!--    Log In Activity    -->
-
     <string name="sign_in">Sign In</string>
     <string name="username">Username</string>
     <string name="password">Password</string>
@@ -27,4 +25,12 @@
 
     <string name="blocked_account">Ce compte est bloqué</string>
     <string name="wrong_account">Nom d\'Utilisateur ou Mot de Passe erroné</string>
+
+
+    <!--    Discover Fragment    -->
+    <string name="discover">Discover</string>
+    <string name="news_from_all_over_the_world">News from all over the world</string>
+    <string name="search">Search</string>
+
+
 </resources>

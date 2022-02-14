@@ -11,6 +11,7 @@ import com.example.cirestechnologiesmobilechallenge.core.util.Constants
 import com.example.cirestechnologiesmobilechallenge.core.util.collectLatestLifecycleFlow
 import com.example.cirestechnologiesmobilechallenge.databinding.ActivityLogInBinding
 import com.example.cirestechnologiesmobilechallenge.domain.model.User
+import com.example.cirestechnologiesmobilechallenge.presentation.news.MainActivity
 import com.example.cirestechnologiesmobilechallenge.presentation.onBoarding.OnBoardingViewModel
 import dagger.hilt.android.AndroidEntryPoint
 
@@ -43,7 +44,7 @@ class LogInActivity : AppCompatActivity() {
             when(event) {
                 is LogInViewModel.UIEvent.LogInButtonPressed -> {
                     when(event.message) {
-                        Constants.SUCCESS -> { Toast.makeText(this, "SUCCESS", Toast.LENGTH_LONG).show() }
+                        Constants.SUCCESS -> { goToMainPage() }
                         Constants.BLOCKED -> { Toast.makeText(this, getString(R.string.blocked_account), Toast.LENGTH_LONG).show() }
                         Constants.ERROR -> { Toast.makeText(this, getString(R.string.wrong_account), Toast.LENGTH_LONG).show() }
                     }
@@ -53,6 +54,6 @@ class LogInActivity : AppCompatActivity() {
     }
 
     private fun goToMainPage() {
-        startActivity(Intent(this, LogInActivity::class.java))
+        startActivity(Intent(this, MainActivity::class.java))
     }
 }
