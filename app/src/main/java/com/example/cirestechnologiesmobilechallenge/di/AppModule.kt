@@ -1,9 +1,9 @@
 package com.example.cirestechnologiesmobilechallenge.di
 
 import android.content.Context
-import com.example.cirestechnologiesmobilechallenge.data.remote.service.NewsServiceImpl
 import com.example.cirestechnologiesmobilechallenge.core.util.SharedPreference
 import com.example.cirestechnologiesmobilechallenge.data.remote.repository.NewsServices
+import com.example.cirestechnologiesmobilechallenge.data.remote.service.NewsServiceImpl
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -33,7 +33,6 @@ object AppModule {
                     coerceInputValues = true
                     ignoreUnknownKeys = true
                 })
-
             }
         }
     }

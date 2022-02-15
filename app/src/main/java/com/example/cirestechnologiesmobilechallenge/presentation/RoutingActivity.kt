@@ -1,9 +1,9 @@
 package com.example.cirestechnologiesmobilechallenge.presentation
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.activity.viewModels
+import androidx.appcompat.app.AppCompatActivity
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 import com.example.cirestechnologiesmobilechallenge.R
 import com.example.cirestechnologiesmobilechallenge.presentation.authentication.LogInActivity
@@ -36,7 +36,7 @@ class RoutingActivity : AppCompatActivity() {
     }
 
     private fun goToLoginPage() {
-        startActivity(Intent(this, MainActivity::class.java))
+        startActivity(Intent(this, LogInActivity::class.java))
     }
 
     private fun goToOnBoardingPage() {

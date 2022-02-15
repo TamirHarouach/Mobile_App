@@ -31,6 +31,7 @@
     <string name="discover">Discover</string>
     <string name="news_from_all_over_the_world">News from all over the world</string>
     <string name="search">Search</string>
+    <string name="exit_message">Appuyez une deuxième fois pour quitter.</string>
 
 
 </resources>

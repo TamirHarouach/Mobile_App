@@ -1,13 +1,10 @@
 package com.example.cirestechnologiesmobilechallenge.presentation.onBoarding
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
 import androidx.activity.viewModels
+import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
-import androidx.core.splashscreen.SplashScreen
-import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 import androidx.viewpager2.widget.ViewPager2
 import com.example.cirestechnologiesmobilechallenge.R
 import com.example.cirestechnologiesmobilechallenge.core.util.collectLatestLifecycleFlow
@@ -107,6 +104,10 @@ class OnBoardingActivity : AppCompatActivity() {
     override fun onDestroy() {
         binding.onBoardingViewPager.unregisterOnPageChangeCallback(onBoardingPageChangeCallback)
         super.onDestroy()
+    }
+
+    override fun onBackPressed() {
+        finishAffinity() // finish activity
     }
 
 }

@@ -5,7 +5,6 @@ import androidx.lifecycle.viewModelScope
 import com.example.cirestechnologiesmobilechallenge.core.util.Constants
 import com.example.cirestechnologiesmobilechallenge.core.util.SharedPreference
 import dagger.hilt.android.lifecycle.HiltViewModel
-import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.MutableSharedFlow
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.asSharedFlow

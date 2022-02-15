@@ -2,16 +2,14 @@ package com.example.cirestechnologiesmobilechallenge.presentation.news.discover
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.example.cirestechnologiesmobilechallenge.core.util.Constants
 import com.example.cirestechnologiesmobilechallenge.core.util.Resource
-import com.example.cirestechnologiesmobilechallenge.core.util.SharedPreference
-import com.example.cirestechnologiesmobilechallenge.data.remote.dto.NewsDto
 import com.example.cirestechnologiesmobilechallenge.data.remote.repository.NewsServices
 import com.example.cirestechnologiesmobilechallenge.domain.model.Data
-import com.example.cirestechnologiesmobilechallenge.domain.model.User
-import com.example.cirestechnologiesmobilechallenge.presentation.onBoarding.OnBoardingViewModel
 import dagger.hilt.android.lifecycle.HiltViewModel
-import kotlinx.coroutines.flow.*
+import kotlinx.coroutines.flow.MutableSharedFlow
+import kotlinx.coroutines.flow.asSharedFlow
+import kotlinx.coroutines.flow.launchIn
+import kotlinx.coroutines.flow.onEach
 import kotlinx.coroutines.launch
 import javax.inject.Inject
 

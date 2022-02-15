@@ -1,6 +1,9 @@
 package com.example.cirestechnologiesmobilechallenge.presentation.news
 
 import android.os.Bundle
+import android.os.Handler
+import android.os.Looper
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import com.example.cirestechnologiesmobilechallenge.R
@@ -13,6 +16,7 @@ import dagger.hilt.android.AndroidEntryPoint
 @AndroidEntryPoint
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
+    var exit = false
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -47,4 +51,20 @@ class MainActivity : AppCompatActivity() {
             replace(R.id.flFragment, fragment)
             commit()
         }
+
+    override fun onBackPressed() {
+        if (exit) {
+            finishAffinity() // finish activity
+        } else {
+            Toast.makeText(
+                this@MainActivity, getString(R.string.exit_message),
+                3 * 1000
+            ).show()
+            exit = true
+            Handler(Looper.getMainLooper()).postDelayed(
+                { exit = false },
+                (3 * 1000).toLong()
+            )
+        }
+    }
 }

@@ -7,7 +7,6 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
-import com.example.cirestechnologiesmobilechallenge.R
 import com.example.cirestechnologiesmobilechallenge.core.util.Constants
 import com.example.cirestechnologiesmobilechallenge.core.util.collectLifecycleFlow
 import com.example.cirestechnologiesmobilechallenge.databinding.FragmentDiscoverBinding

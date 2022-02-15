@@ -1,18 +1,16 @@
 package com.example.cirestechnologiesmobilechallenge.presentation.authentication
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
 import android.widget.Toast
 import androidx.activity.viewModels
+import androidx.appcompat.app.AppCompatActivity
 import com.example.cirestechnologiesmobilechallenge.R
 import com.example.cirestechnologiesmobilechallenge.core.util.Constants
 import com.example.cirestechnologiesmobilechallenge.core.util.collectLatestLifecycleFlow
 import com.example.cirestechnologiesmobilechallenge.databinding.ActivityLogInBinding
 import com.example.cirestechnologiesmobilechallenge.domain.model.User
 import com.example.cirestechnologiesmobilechallenge.presentation.news.MainActivity
-import com.example.cirestechnologiesmobilechallenge.presentation.onBoarding.OnBoardingViewModel
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
@@ -55,5 +53,9 @@ class LogInActivity : AppCompatActivity() {
 
     private fun goToMainPage() {
         startActivity(Intent(this, MainActivity::class.java))
+    }
+
+    override fun onBackPressed() {
+        finishAffinity() // finish activity
     }
 }
